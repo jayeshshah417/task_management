@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TaskManagement</string>
+
+    <string name="lb_signin">Signin</string>
+</resources>
