@@ -12,17 +12,5 @@ class DBRepository {
     final val taskTable = AppApplication.INSTANCE.getDatabase().collection("task")
 
 
-    fun getTask() {
-        var data:TaskModel? = null
-        taskTable.whereEqualTo("user_id",AppApplication.INSTANCE.getDatabase().document("user/"+AppApplication.INSTANCE.getSession().getUserId())).get()
-            .addOnSuccessListener { result ->
-                for(it in result) {
-                   Log.d("id",it.id)
-                } }
-
-            }
-
-
-
 
 }

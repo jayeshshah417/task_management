@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         Handler(Looper.getMainLooper()).postDelayed({
             val user_id = AppApplication.INSTANCE.getSession().getUserId()
-            val user = userViewModel.getUser(user_id)
+            val user = userViewModel.getUserFromId()
 
         },5000)
 

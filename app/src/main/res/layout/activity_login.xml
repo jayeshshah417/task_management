@@ -15,6 +15,7 @@
         android:id="@+id/et_email"
         android:padding="10dp"
         android:hint="Email"
+        android:text="jayeshshah.2016@gmail.com"
         android:background="@color/white"
        app:layout_constraintBottom_toTopOf="@id/bt_signin"
         app:layout_constraintTop_toTopOf="parent"

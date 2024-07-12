@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/Fieldmargin"
+    app:cardCornerRadius="4dp"
+    android:elevation="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/Fieldmargin">
+
+    <TextView
+        android:layout_marginTop="0dp"
+        style="@style/TextViewHeader"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_title"/>
+
+        <TextView
+            style="@style/TextViewBody"
+            android:textAlignment="viewEnd"
+            android:layout_width="0dp"
+            android:textSize="@dimen/textBody_s"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tv_createdat"/>
+
+    <TextView
+        style="@style/TextViewBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:id="@+id/tv_description"/>
+
+   <Spinner
+       android:layout_marginTop="@dimen/Fieldmargin"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/tv_description"
+       android:layout_width="0dp"
+       app:layout_constraintWidth_percent="0.45"
+       android:layout_height="wrap_content"
+       android:id="@+id/sp_user"/>
+    <Spinner
+        android:layout_marginTop="@dimen/Fieldmargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.45"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp_status"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -2,6 +2,7 @@ package com.japps.taskmanagement.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultLauncher
 import androidx.appcompat.app.AppCompatActivity
@@ -32,11 +33,12 @@ class LoginActivity : AppCompatActivity() {
         userViewModel.user.observe(this,{ user ->
 
             if(user==null) {
+                Log.d("Login","Createing user")
                 userViewModel.createUser(
                     activityLoginBinding.etEmail.text.toString()
                 )
             }else{
-
+                Log.d("Login","User found")
             AppApplication.INSTANCE.getSession().setUserId(user.id)
             startActivity(Intent(this, DashboardActivity::class.java))
         }
